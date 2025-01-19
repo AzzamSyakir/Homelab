@@ -26,16 +26,42 @@ Docker is amazing because it allows me to:
 With Docker, everything is modular, portable, and easy to replicate! 💡
 
 ---
-
 ### 🛠️ Simplifying Management with Portainer
+
 Managing multiple Docker environments across VMs can be challenging. To make this process easier, I decided to use **Portainer**, a lightweight and user-friendly tool for managing Docker containers. Here’s my setup:  
+
 1. Installed the **Portainer Agent** on each VM to enable communication between the VMs and the main server.  
 2. Installed the **Portainer Server** on my Proxmox node to centralize control and management.  
 
 With this setup, I can now monitor, deploy, and manage all Docker containers across my VMs from a single **Portainer dashboard**.  
 
-Here’s a screenshot of my main Portainer interface:  
+---
+
+### 🖼️ Current Server Architecture
+
+Here’s a visual representation of my current server architecture:  
+
+![Server Architecture Diagram](../images/server-architecture-week-1.png)  
+
+#### Explanation:
+1. **Proxmox Node**: Serves as the hypervisor managing all virtual machines.  
+2. **Virtual Machines (VMs)**: Each VM runs specific applications inside Docker containers. These applications might include services such as databases, message queues, or cache servers (e.g., Redis).  
+3. **Portainer Server**: Installed on the Proxmox physical node to centralize Docker container management across all VMs.  
+4. **Portainer Agents**: Installed on each VM to facilitate communication and management via the Portainer Server.  
+
+This architecture allows me to run isolated environments for different services while still managing everything efficiently through Portainer.  
+
+#### Why This Setup Works:
+- **Isolation**: Each VM can host independent services without interference.  
+- **Scalability**: Adding more VMs or containers is straightforward as the Portainer setup supports multiple environments.  
+- **Efficiency**: With Portainer, I don’t need to manage each VM individually; all tasks can be centralized.  
+
+Here’s the diagram:  
+
 ![Portainer Main Dashboard](../images/portainer.png)  
+
+---  
+Stay tuned for next week’s update, where I’ll experiment with using LXC (Linux Containers) to compare performance and efficiency against VMs.  
 
 
 ## 💻 My First Week: Setting Up the Server
