@@ -2,7 +2,7 @@
 
 ## 🗓️ January 19, 2025: First Milestone Achieved! 🎉
 
-Hello, guys! Today, I’m excited to share how I managed to **deploy my applications locally** on my very own home server. It’s been a learning-packed journey, and here’s a detailed breakdown of what I’ve done so far:
+Hello, world! Today, I’m excited to share how I managed to **deploy my applications locally** on my very own home server. It’s been a learning-packed journey, and here’s a detailed breakdown of what I’ve done so far:
 
 ---
 
@@ -10,8 +10,8 @@ Hello, guys! Today, I’m excited to share how I managed to **deploy my applicat
 
 ### 🌐 Virtualization Technology
 I’m using **virtualization technology** to manage my applications effectively. Here’s how I set it up:
-- I Created **4 Virtual Machines (VMs)** using **Proxmox**.
-- Each VM runs my applications inside **Docker containers**.  
+- Created **4 Virtual Machines (VMs)** using **Proxmox**.
+- Each VM runs my applications inside **Docker containers**.
 
 ---
 
@@ -27,11 +27,23 @@ With Docker, everything is modular, portable, and easy to replicate! 💡
 
 ---
 
+### 🛠️ Simplifying Management with Portainer
+Managing multiple Docker environments across VMs can be challenging. To make this process easier, I decided to use **Portainer**, a lightweight and user-friendly tool for managing Docker containers. Here’s my setup:  
+1. Installed the **Portainer Agent** on each VM to enable communication between the VMs and the main server.  
+2. Installed the **Portainer Server** on my Proxmox node to centralize control and management.  
+
+With this setup, I can now monitor, deploy, and manage all Docker containers across my VMs from a single **Portainer dashboard**.  
+
+Here’s a screenshot of my main Portainer interface:  
+![Portainer Main Dashboard](../images/portainer.png)  
+
+
 ## 💻 My First Week: Setting Up the Server
 
 During the first week:
 1. I figured out how to **set up a home server**.
 2. Learned to deploy my applications inside the server using VMs.  
+3. Integrated **Portainer** for centralized management of Docker environments.
 
 **Fun Fact:** In Proxmox, there are two ways to deploy applications:
 - Using **VMs** (Virtual Machines).
@@ -62,6 +74,7 @@ Stay tuned for the update! Let’s see if my old laptop server can handle the ch
 ## 📋 Summary
 - 🖥️ Set up 4 VMs in Proxmox.
 - 🐳 Deployed apps using Docker containers.
+- 🛠️ Installed **Portainer** for centralized management.
 - 🔍 Next step: Test LXC containers for better performance.
 
 ---
