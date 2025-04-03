@@ -1,5 +1,5 @@
 
-# Home Server Project
+# Home Lab Project
 
 ## The Beginning
 
