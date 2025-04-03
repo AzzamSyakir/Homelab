@@ -1,4 +1,3 @@
-
 # Home Server Project
 
 ## The Beginning
